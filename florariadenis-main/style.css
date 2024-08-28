@@ -1,0 +1,1217 @@
+/*STYLEEE*/
+
+
+/* Variables */
+:root {
+    --font-sans: "Inter", sans-serif;
+    --font-size: 18px;
+    --color-yellow: #FFF8DB;
+    --color-pink: #FFC7ED;
+    --color-light-purple: #7D8ABC;
+    --color-dark-purple: #304463;
+    --color-logo: #1679AB;
+    --color-light: #f2f2f2;
+    --color-dark: #333;
+    --color-orange: #FF7D29;
+    --color-blue-btn: #51829B;
+    --color-yellow2: #ffda00;
+
+    --transition-dur:0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+/*Style*/
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
+    line-height: 1.5rem;
+    background-color: var(--color-light);
+}
+
+p{
+    color: black;
+    font-weight: 400;
+}
+
+em{
+    color: #828282;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    transition: var(--transition-dur);
+    color: var(--color-dark-purple);
+}
+a:hover {
+    color: var(--color-light-purple);
+}
+
+h1,h2,h3 {
+    font-weight: 800;
+}
+
+h1 {
+    color: var(--color-light);
+    font-size: 3.5rem;
+}
+h2 {
+    color: var(--color-dark-purple);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition-dur)
+}
+h3 {
+    color: var(--color-dark-purple);
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+}
+h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Button styles */
+
+.btn {
+    padding: 20px 30px;
+    display: inline-block;
+    border: none;
+    transition: var(--transition-dur);
+    margin: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn.btn-primary {
+    color: var(--color-dark-purple);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border-style:solid ;
+    border-width: 1px;
+    border-color: var(--color-light);
+    padding: 20px 35px;
+    justify-content: center;
+}
+
+.btn.btn-secondary {
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+.btn.btn-primary:hover {
+    color: #fff;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn.btn-invert:hover {
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2);
+    -ms-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2);
+    -o-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Forms */
+
+input[type="text"] {
+    font-size: 1rem;
+    padding: 8px 5px;
+    border-radius: 5px;
+}
+
+
+/* TOP NAV*/
+#top-navigation {
+    position: absolute;
+    width: 100%;
+}
+.main-menu .navigation{
+    position: static;
+    margin: 0;
+}
+.main-menu .navigation > li {
+    position: relative;
+    float: left;
+    margin-right: 35px;
+    padding: 35px 0 15px;
+    transition: all ease 500ms;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.main-menu .navigation li a {
+    font-weight: 600;
+}
+
+.main-menu .navigation > li:last-child {
+    margin-right: 0;
+}
+
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li.current > a {
+    opacity: 1;
+    color: var(--color-pink);
+}
+
+.main-menu .navigation > li > a {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    opacity: 1;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+}
+
+.main-menu .navigation > li:hover > a::after,
+.main-menu .navigation > li.current > a::after {
+    width: 22px;
+}
+
+
+.main-menu .navigation > li.menu-item-has-children > a {
+    padding-right: 16px !important;
+}
+
+.main-menu .navigation > li.menu-item-has-children > a:before {
+    font-family: flaticon;
+    content: "\f104";
+    position: absolute;
+    right: 0px;
+    font-size: 12px;
+    line-height: 34px;
+    font-weight: 800;
+}
+
+.main-menu .navigation > li > ul {
+    position: absolute;
+    left: -20px;
+    top: 70px;
+    min-width: 200px;
+    z-index: 100;
+    opacity: 0;
+    list-style: none;
+    visibility: hidden;
+    display: block;
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+    padding: 20px 15px;
+    background-color: var(--color-light);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu .navigation > li > ul > li {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.main-menu .navigation > li > ul > li:last-child {
+    border-bottom: none;
+}
+
+.main-menu .navigation > li > ul > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: var(--color-dark-purple);
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+}
+
+.main-menu .navigation > li > ul > li:hover > a {
+    color: var(--color-light-purple);
+    padding-left: 10px;
+}
+
+.main-menu .navigation > li > ul > li.menu-item-has-children > a:after {
+    font-family: flaticon;
+    content: "\f105";
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    width: 10px;
+    height: 20px;
+    display: block;
+    color: var(--color-dark-purple);
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    z-index: 5;
+    font-weight: 800;
+}
+
+.main-menu .navigation > li > ul > li.menu-item-has-children:hover > a:after {
+    color: var(--color-dark-purple);
+
+}
+
+/*Sub submenu*/
+
+.main-menu .navigation > li > ul > li > ul {
+    position: absolute;
+    left: 120%;
+    top: 0%;
+    min-width: 200px;
+    z-index: 100;
+    list-style: none;
+    visibility: hidden;
+    display: block;
+    padding: 20px 15px;
+    background-color: var(--color-light);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+}
+
+.main-menu .navigation > li > ul > li > ul.from-right {
+    left: auto;
+    right: 0px;
+}
+
+.main-menu .navigation > li > ul > li > ul > li {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.main-menu .navigation > li > ul > li > ul > li:last-child {
+    border-bottom: none;
+}
+
+
+.main-menu .navigation > li > ul > li > ul > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 18px;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: var(--color-dark-purple);
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+}
+
+.main-menu .navigation > li > ul > li > ul > li:hover > a {
+   color: var(--color-light-purple); 
+   padding-left: 10px;
+}
+
+/*sub Menu + sub menu hover*/
+
+.main-menu .navigation > li > ul > li.menu-item-has-children > a:after {
+  font-family: flaticon;
+  content: "\f105";
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  width: 10px;
+  height: 20px;
+  display: block;
+  color: var(--color-dark);
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  z-index: 5;
+  font-weight: 800;
+}
+
+.main-menu .navigation > li > ul > li.menu-item-has-children:hover > a:after {
+  color: var(--color-dark);
+}
+
+.main-menu .navigation > li > ul > li > ul {
+  position: absolute;
+  left: 120%;
+  top: 0%;
+  min-width: 150px;
+  z-index: 100;
+  list-style: none;
+  opacity: 0;
+  display: block;
+  padding: 20px 15px;
+  background-color: var(--color-light);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-dur) ease;
+  -moz-transition: all var(--transition-dur) ease;
+  -webkit-transition: all var(--transition-dur) ease;
+  -ms-transition: all var(--transition-dur) ease;
+  -o-transition: all var(--transition-dur) ease;
+}
+
+.main-menu .navigation > li > ul > li > ul.from-right {
+  left: auto;
+  right: 0px;
+}
+
+.main-menu .navigation > li > ul > li > ul > li {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+}
+
+.main-menu .navigation > li > ul > li > ul > li:last-child {
+  border-bottom: none;
+}
+
+.main-menu .navigation > li > ul > li > ul > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 18px;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: var(--color-dark);
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+}
+
+.main-menu .navigation > li > ul > li > ul > li:hover > a {
+  color: var(--color-light-purple);
+  padding-left: 10px;
+}
+
+.main-menu .navigation > li.menu-item-has-children > ul {
+  transform: rotateZ(8deg);
+  -moz-transform: rotateZ(8deg);
+  -webkit-transform: rotateZ(8deg);
+  -ms-transform: rotateZ(8deg);
+  -o-transform: rotateZ(8deg);
+}
+
+.main-menu .navigation > li.menu-item-has-children:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  left: 0%;
+  border-top: 0px !important;
+  transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+}
+
+.main-menu .navigation li > ul > li.menu-item-has-children > ul {
+  transform: rotateZ(8deg);
+  -moz-transform: rotateZ(8deg);
+  -webkit-transform: rotateZ(8deg);
+  -ms-transform: rotateZ(8deg);
+  -o-transform: rotateZ(8deg);
+}
+
+.main-menu .navigation li > ul > li.menu-item-has-children:hover > ul {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.main-menu > ul li.menu-item-has-children .dropdown-btn {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: var(--color-light);
+  line-height: 28px;
+  border: 1px solid var(--color-light);
+  background-size: 20px;
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+}
+
+.main-menu
+  > ul
+  li.menu-item-has-children
+  .dropdown-btn
+  i.flaticon-arrow-down-sign-to-navigate::before {
+  font-size: 100px;
+}
+
+.navbar-open {
+    position: relative;
+    display: none;
+    background-color: unset;
+    padding: 0;
+    border: none;
+    position: absolute;
+    right: 32px;
+    top: 0px;
+}
+
+.navbar-open .flaticon {
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 18px 0px;
+}
+
+
+/* Mobile menu */
+
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-right: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: opacity var(--transition-dur) ease, visibility var(--transition-dur) ease;
+}
+
+.mobile-menu-visible{
+    overflow: hidden;
+}
+
+.mobile-menu-visible .mobile-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu .menu-backdrop {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(101%);
+    -webkit-transform: translateX(101%);
+    -ms-transform: translateX(101%);
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+}
+
+.mobile-menu-visible .mobile-menu .menu-backdrop {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+}
+
+.mobile-menu .menu-box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    background: var(--color-light);
+    padding: 0;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0;
+    transform: translateX(101%);
+    -webkit-transform: translateX(101%);
+    -ms-transform: translateX(101%);
+}
+
+.mobile-menu-visible .mobile-menu .menu-box {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+}
+
+.mobile-menu .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 26px;
+    color: var(--color-dark-purple);
+    cursor: pointer;
+    z-index: 10;
+
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+}
+
+.mobile-menu-visible .mobile-menu .close-btn {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+}
+
+.mobile-menu .close-btn:hover {
+    opacity: 0.5;
+}
+
+.mobile-menu .navigation{
+    position: relative;
+    padding-top: 50px;
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu .navigation li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu .navigation li > ul > li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .navigation li > ul > li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu .navigation li > a {
+    position: relative;
+    display: block;
+    line-height: 24px;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: var(--color-dark-purple);
+    text-transform: capitalize;
+    transition: all var(--transition-dur) ease;
+    -moz-transition: all var(--transition-dur) ease;
+    -webkit-transition: all var(--transition-dur) ease;
+    -ms-transition: all var(--transition-dur) ease;
+    -o-transition: all var(--transition-dur) ease;
+}
+
+.mobile-menu .navigation li.current > a,
+.mobile-menu .navigation li > a:hover {
+    color: var(--color-pink);
+}
+
+
+.mobile-menu .navigation li.menu-item-has-children .dropdown-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 44px;
+    color: var(--color-dark-purple);
+    cursor: pointer;
+    z-index: 5;
+}
+
+.mobile-menu .navigation li.menu-item-has-children .dropdown-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 1px;
+    height: 24px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu .navigation li > ul,
+.mobile-menu .navigation li > ul > li > ul {
+    display: none;
+}
+
+.carousel-inner {
+    display: none;
+    visibility: hidden;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 874px) {
+    #top-navigation .top-menu {
+        display: none !important;
+        
+    }
+
+    h2{
+        font-size: 1.5rem;
+
+    }
+
+    .page-title {
+        font-size: 3rem;
+    }
+
+    #cta-span{
+        text-align: center;
+        justify-content: center;
+    }
+
+    .title-banner {
+        padding: 80px 0 60px 0!important;
+    }
+
+    .navbar-open {
+        opacity: 1;
+        visibility: visible;
+        display: inline-block;
+    }
+
+    /* Hide the gallery grid for mobile devices */
+    .gallery .gallery-container {
+        display: none !important; /* Hide all gallery elements */
+    }
+
+    .gallery-5, .gallery-4 {
+        display: none !important; /* Ensure specific galleries are hidden */
+    }
+
+    .carousel-inner {
+        display: block !important;
+        visibility: visible !important;
+        padding: 0px;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 0;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gallery-container{
+        padding: 0 !important;
+        display: none !important;
+        margin: 0;
+    }
+
+    .footer-calltoaction .disclaimer {
+        font-size: 0.8rem !important;
+    }
+    
+    .tiktok-wrapper{
+        padding: 0 !important;
+    }
+
+    
+
+    .social-container{
+        display: block !important;
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
+
+
+    #program, #contact{
+        position: unset !important;
+        text-align: center !important;
+        margin: 20px 0 !important;
+
+    }
+
+    .social-media-box {
+        position: unset !important;
+        text-align: center !important;
+        margin: 30px 0 0 0 !important;
+    }
+
+    #program {
+        order: 1; /* Program first */
+    }
+
+    #contact {
+        order: 2; /* Contact second */
+    }
+
+    .social-media-box {
+        order: 3; /* Social media icons last */
+    }
+
+    #program p{
+        text-align: left !important;
+    }
+
+    #contact p{
+        text-align: left !important;
+    }
+
+    .social-icon {
+        font-size: 18px; /* Slightly smaller icon size for mobile */
+        padding: 10px 5px; /* Reduce padding to save space */
+    }
+
+    .contact-item {
+        justify-content: left !important;
+    }
+
+    .program-box {
+        margin: 15x 0 25px 0 !important;
+    }
+}
+
+
+
+
+
+/*TITLE BANNER */
+
+.title-style {
+    color: var(--color-light) !important;
+}
+
+
+.title-banner {
+    padding: 120px 0;
+    background: linear-gradient(100deg,#FFC7ED 0%, #b370eb 50%, #1679AB 100%);
+
+}
+
+.title-banner .sub-title {
+    color: var(--color-dark-purple);
+    font-size: 1.5rem;
+}
+
+
+
+.page-title {
+    font-family: "Caveat", sans-serif;
+    font-weight: 1000;
+}
+
+
+/* Content gallery*/
+
+.gallery-container{
+    padding: 40px 0;
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 20px;
+    visibility: visible;
+}
+
+.gallery-5 {
+    grid-template-columns: repeat(5, 1fr);
+    visibility: visible;
+    display: grid;
+}
+
+.gallery-4 {
+    grid-template-columns: repeat(4, 1fr);
+    visibility: visible;
+    display: grid;
+}
+
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height:max-content;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Mobile Styles */
+
+
+
+
+
+/* Lightbox styles */
+
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stays in place when scrolling */
+    z-index: 1000; /* On top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lightbox-content {
+    max-width: 80%; /* Limit the width of the image */
+    max-height: 80%; /* Limit the height of the image */
+    margin: auto; /* Ensure that the image is centered */
+    display: block; /* Make sure the image is displayed as a block element */
+}
+
+.close {
+    position: absolute; /* Positioned relative to the lightbox */
+    top: 20px; /* Position from the top */
+    right: 30px; /* Position from the right */
+    color: white; /* White close button */
+    font-size: 40px; /* Large font size */
+    font-weight: bold; /* Bold font */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+
+
+
+/* Footer section */
+
+.footer-calltoaction {
+    padding: 50px 0 15px 0;
+    background: linear-gradient(100deg, #FFC7ED 0%, #b370eb 50%, #1679AB 100%);
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+
+
+.footer-calltoaction .sub-title {
+    color: var(--color-light);
+    font-family: "Caveat", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 1000;
+    padding: 10px 0;
+    margin-bottom: 8px;
+}
+
+.footer-calltoaction h2 {
+    margin: 80px 0 20px 0;
+    color: rgba(48, 68, 99, 0.9);
+}
+
+.footer-calltoaction p {
+    color: var(--color-dark-purple);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#p-cta{
+    padding: 25px 0 50px;
+    display: block;
+    color: var(--color-dark-purple);
+}
+
+#p-cta a{
+    color: var(--color-pink);
+}
+
+.footer-calltoaction .cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-calltoaction .cta-wrapper a.btn {
+    margin-bottom: 20px;
+}
+
+.footer-calltoaction iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.footer-calltoaction .disclaimer {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 10px 0;
+}
+
+
+/*Map section*/
+
+.tiktok-section {
+    background: var(--color-light); /* Light background */
+    padding: 80px 0 0 0;
+    justify-content: center;
+    display: block;
+}
+
+.tiktok-section h3 {
+    color: var(--color-dark-purple);
+    margin-bottom: 20px; /* Adjusted to match with TikTok and map */
+}
+
+/* TikTok Wrapper to control background and padding */
+.tiktok-wrapper {
+    background-color: rgba(0, 0, 0, 0.1); /* Set to your preferred color */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between TikTok video and map */
+    display: block;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Style the TikTok embed */
+.tiktok-wrapper blockquote {
+    background-color: transparent !important; /* Make the TikTok background transparent */
+    margin: auto; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.tiktok-wrapper section {
+    background-color: transparent !important; /* Ensure section background is also transparent */
+}
+
+.tiktok-section iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+.footer-last .last-p {
+    color: var(--color-dark-purple);
+}
+
+
+
+
+/* Footer last copyright + socials*/
+
+.footer-last {
+    padding: 55pxpx;
+    background-color: rgba(242, 242, 242,0.2);
+    text-align: center;
+    
+}
+
+.footer-content {
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+
+.footer-content iframe {
+    display: block;
+    margin: 0 auto 20px; /* Centers the iframe and adds margin below */
+    max-width: 500px;
+}
+
+
+/* contact, program and social icons*/
+
+.social-container {
+    border-top: 1px solid #ffffff;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns the sections as per the original requirement */
+    position: relative;
+    padding: 20px;
+}
+
+.social-container p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.6); /* Description text color */
+    font-size: 0.9em;
+}
+
+.social-container #program {
+    text-align: left;
+}
+
+.social-media-box {
+    flex: 1;
+    text-align: center; /* Center align the social media box */
+    padding-top: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    margin-left: 10px;
+    font-size: 20px; /* Adjust icon size as needed */
+    color: var(--color-dark); /* Icon color */
+    text-decoration: none;
+    padding: 25px 10px;
+}
+
+
+
+
+.footer-description {
+    margin-bottom: 10px;
+    color: var(--color-dark); /* Description text color */
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8); /* Copyright text color */
+    padding:100px 0;
+}
+
+.social-icon:hover {
+    transform: scale(1.3);
+    color: var(--color-light-purple);
+}
+
+.social-icon i {
+    display: block;
+}
+
+/* Additional styles for specific icons */
+.social-icon.facebook:hover {
+    color: #3b5998;
+}
+
+.social-icon.instagram:hover {
+    color: #e4405f;
+}
+
+.social-icon.tiktok:hover {
+    color: #000000; /* TikTok logo color */
+}
+
+.footer-last .copyright {
+    padding: 10px 0 10px 0;
+}
+
+.footer-last .copyright p {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.program-item {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+#program {
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 15px;
+}
+
+.program-box {
+    margin: 15x 0 25px 0;
+}
+
+
+.contact-item {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+}
+
+#contact {
+    text-align: right;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.contact-box {
+    margin: 0x 0 25px 0;
+}
+
