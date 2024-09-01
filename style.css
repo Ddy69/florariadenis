@@ -1215,3 +1215,9 @@ input[type="text"] {
     margin: 0x 0 25px 0;
 }
 
+.textbox-order h1,h2 {
+    font-family: var(--font-sans);
+    color: var(--color-dark-purple);
+    padding: 15px;
+    margin-top: 15px;
+}
